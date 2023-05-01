@@ -19,7 +19,7 @@ environments:
   - key: "POSTGRES_PASSWORD"
     value: "random_password"
   - key: "POSTGRES_USER"
-    value: "postgres"
+    value: "odoo"
   - key: "POSTGRES_DB"
     value: "postgres"
 
