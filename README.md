@@ -10,7 +10,7 @@ Deploy Odoo server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open Odoo UI here:
+You can open Odoo UI here:
 
     URL: https://[CI_CD_DOMAIN]
     email: [ADMIN_EMAIL]
