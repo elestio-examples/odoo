@@ -15,7 +15,7 @@ services:
         max-file: "5"
         max-size: "10m"
     ports:
-      - 172.17.0.1.30805:5432
+      - "172.17.0.1:30805:5432"
 
   odoo:
     image: elestio/odoo:${SOFTWARE_VERSION_TAG}
