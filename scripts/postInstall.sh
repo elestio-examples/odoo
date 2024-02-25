@@ -5,7 +5,16 @@ set -o allexport; source .env; set +o allexport;
 echo "Waiting for software to be ready ..."
 sleep 30s;
 
-#register the local server in the web ui
+
+if [ -e "./initialized" ]; then
+    echo "Already initialized, skipping..."
+else
+    sed -i 's~proxy_set_header X-Forwarded-Proto \$scheme;~proxy_set_header X-Forwarded-Proto \$scheme;\n    proxy_set_header X-Forwarded-Host \$host;~g' /opt/elestio/nginx/conf.d/${DOMAIN}.conf
+
+    docker exec elestio-nginx nginx -s reload;
+    touch "./initialized"
+fi
+
 
 target=$(docker-compose port odoo 8069)
 

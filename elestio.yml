@@ -36,6 +36,8 @@ environments:
     value: "odoo"
   - key: "POSTGRES_DB"
     value: "postgres"
+  - key: "DOMAIN"
+    value: "[CI_CD_DOMAIN]"
 
 config:
   runTime: "dockerCompose"
