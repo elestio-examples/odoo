@@ -13,6 +13,9 @@ chown -R 1000:1000 ./addons
 mkdir -p ./config
 chown -R 1000:1000 ./config
 
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
 cat <<EOT > ./servers.json
 {
     "Servers": {
