@@ -29,6 +29,7 @@ services:
     volumes:
       - ./addons:/mnt/extra-addons
       - ./config:/etc/odoo
+      - ./odoo_www:/var/lib/odoo
     logging:
       driver: "json-file"
       options:
