@@ -14,6 +14,8 @@ mkdir -p ./config
 chown -R 1000:1000 ./config
 
 mkdir -p ./odoo_www
+mkdir -p ./odoo_www/sessions
+mkdir -p ./odoo_www/addons
 chown -R 1000:1000 ./odoo_www
 
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
